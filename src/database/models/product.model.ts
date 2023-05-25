@@ -4,7 +4,7 @@ import { Product } from '../../types/Product';
 import Order from './order.model';
 import User from './user.model';
 
-export type ProductInputtableTypes = Optional<Product, 'id'>;
+export type ProductInputtableTypes = Optional<Product, 'id' | 'orderId'>;
 type ProductSequelizeModelCreator = ModelDefined<Product, ProductInputtableTypes>;
 export type ProductSequelizeModel = Model<Product, ProductInputtableTypes>;
 
