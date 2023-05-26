@@ -7,6 +7,14 @@ const registerProduct = async (req: Request, res: Response): Promise<Response> =
   return res.status(201).json(productRegistered);
 };
 
+const getAllProducts = async (__req: Request, res: Response) => {
+  const allProducts = await productsService.getAllProducts();
+  console.log(allProducts);
+  
+  return res.status(200).json(allProducts);
+};
+
 export default {
   registerProduct,
+  getAllProducts,
 };

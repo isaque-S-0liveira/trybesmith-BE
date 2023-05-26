@@ -1,5 +1,6 @@
 import ProductModel, { 
   ProductInputtableTypes, 
+  ProductSequelizeModel,
 } from '../database/models/product.model';
 import { Product } from '../types/Product';
 
@@ -18,6 +19,9 @@ const registerProduct = async (product: Product): Promise<ProductInputtableTypes
   return productData;
 };
 
+const getAllProducts = (): Promise<ProductSequelizeModel[]> => ProductModel.findAll();
+
 export default {
   registerProduct,
+  getAllProducts,
 };
