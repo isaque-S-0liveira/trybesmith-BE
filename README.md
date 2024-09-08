@@ -1,4 +1,4 @@
-# My Awesome Project
+# TrybeSmith
 
 ## Contexto
 
